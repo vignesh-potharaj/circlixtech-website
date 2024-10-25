@@ -208,6 +208,7 @@ header::before {
 @media (min-width:780px) {
     .nav_links {
         display: flex;
+        min-height: 120;
     }
     .header_container{
         min-height: 100vh;
@@ -229,3 +230,154 @@ header::before {
         max-height: 80px;
     }
 }
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+section:nth-child(1) {
+    color: #f7f7f7;
+}
+
+section:nth-child(2) {
+    color: #f2e041;
+    background: #f7f7f7;
+}
+
+section:nth-child(3) {
+    color: #f7f7f7;
+}
+
+section:nth-child(4) {
+    color: #6841f2;
+    background: #f7f7f7;
+}
+
+section.container {
+    margin: 5vw;
+}
+
+section h1 {
+    font-size: 3.75rem;
+    font-weight: 600;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+section .cards .text-card {
+    background-color: #6841f2;
+    padding: 1.25rem;
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+section .cards .text-card h3 {
+    font-size: 1.875rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+    cursor: pointer;
+
+}
+.text-card:hover{
+    transition: 0.5s;   
+    opacity: 0.8;
+}
+.text-card:active{
+    opacity:0.3;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 100px;
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 80px;
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+
+    section h1 {
+        font-size: 3rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section .cards .text-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    section h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    section .cards .text-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .logo img {
+        max-height: 25px; /* Reduced from 40px */
+    }
+}
+
+@media (max-width: 480px) {
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section .cards .text-card h3 {
+        font-size: 1.125rem;
+    }
+}
+
