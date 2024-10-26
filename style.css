@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet");
 
 
 :root {
-    --primary-color: #6841f2;
+    --primary-color: #3c1dac;
     --secondary-color: #fda600;
     --text-color: #333333;
     --background-color: #f7f7f7;
@@ -16,25 +16,43 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Hi Melody', cursive;
+    background-image: url('images/white-office-desk-table-with-laptop-coffee-cup-plant-top-view-with-copy-space-flat-lay_795422-6243.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the image stay fixed when scrolling */
+    background-repeat: no-repeat;
+    position: relative;
+    color: var(--text-color);
+    backface-visibility: calc(10% - 10px);
 }
 
-nav {
-    position: absolute;
+body::before {
+    content: '';
+    position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    max-width: var(--max-width);
-    padding: 1rem;
-    margin: auto;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust color & opacity */
+    pointer-events: none; /* Allows interactions with elements below */
+    z-index: -1; /* Keeps overlay behind content */
+}
+
+
+nav {
+    box-shadow: 0px 3px 3px var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-    overflow: hidden;
 }
-
 .nav_logo {
     font-size: 1.2rem;
     font-weight: 600;
@@ -43,7 +61,7 @@ nav {
 
 .nav_links {
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
     display: none;
 }
 
@@ -51,7 +69,7 @@ nav {
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transition: color 0.3s ease, background-color 0.3s ease;
     border-radius: 20px;
@@ -60,6 +78,13 @@ nav {
 .nav_links a:hover {
     color: var(--primary-color);
     background-color: rgba(104, 65, 242, 0.1);
+}
+
+
+header {
+    background-image: url('images/white-office-desk-table-with-laptop-coffee-cup-plant-top-view-with-copy-space-flat-lay_795422-6243.jpg');
+    position: relative;
+    color: var(--primary-color);
 }
 
 a.contact_btn {
@@ -73,80 +98,6 @@ a.contact_btn {
 a.contact_btn:hover {
     background-color: var(--primary-color);
     color: white;
-}
-
-header {
-    background-color: var(--background-color);
-    position: relative;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-.header_container {
-    position: relative;
-    min-height: 100vh;
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 0 1rem;
-}
-
-.header_content {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.header_content h1 {
-    font-size: 3rem;
-    line-height: 4rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header_content h1 span {
-    color: var(--secondary-color);
-}
-
-.header_content .start_project {
-    text-decoration: none;
-    margin-top: 2rem;
-    color: white;
-    background-color: var(--primary-color);
-    font-weight: 600;
-    position: relative;
-    padding: 0.75rem 2.5rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header_content .start_project:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-.header_content .start_project::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -60px;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 2px;
-    background-color: white;
 }
 
 .footer_cards {
@@ -188,46 +139,19 @@ header::before {
 }
 
 .nav_logo img {
-    max-height: 60px;
-    width: auto;
+    max-height: 5px;
+    width: 100px;
 }
 
-@media (min-width: 640px) {
-    .header_container {
-        min-height: 150vh;
-    }
-    .header_content {
-        align-items: flex-start;
-        text-align: left;
-    }
-    .footer_cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 @media (min-width:780px) {
     .nav_links {
         display: flex;
         min-height: 120;
     }
-    .header_container{
-        min-height: 100vh;
-    }
-    .header_container h1{
-        font-size: 5rem;
-        line-height: 6rem;
-    }
-    .footer_cards{
-        grid-template-columns: repeat(6, 1fr);
-    }
-    .card{
-        height: 100px;
-    }
-    .card:hover{
-        height: 250px;
-    }
     .nav_logo img {
-        max-height: 80px;
+        min-height: 75px;
+        min-width: 130px;
     }
 }
 section {
@@ -239,21 +163,21 @@ section {
 }
 
 section:nth-child(1) {
-    color: #f7f7f7;
+    color: var(--background-color);
 }
 
 section:nth-child(2) {
-    color: #f2e041;
-    background: #f7f7f7;
+    color: var(--secondary-color);
+    background: var(--background-color);
 }
 
 section:nth-child(3) {
-    color: #f7f7f7;
+    color: var(--background-color);
 }
 
 section:nth-child(4) {
-    color: #6841f2;
-    background: #f7f7f7;
+    color: var(--primary-color);
+    background: var(--background-color);
 }
 
 section.container {
@@ -279,7 +203,7 @@ section .cards {
 }
 
 section .cards .text-card {
-    background-color: #6841f2;
+    background-color: var(--primary-color);
     padding: 1.25rem;
     flex: 1 1 300px;
     max-width: 400px;
@@ -380,4 +304,3 @@ section .cards .text-card h3 {
         font-size: 1.125rem;
     }
 }
-
