@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
 
 :root {
@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Hi Melody', cursive;
+    font-family: 'Cinzel';
     background-image: url('images/white-office-desk-table-with-laptop-coffee-cup-plant-top-view-with-copy-space-flat-lay_795422-6243.jpg');
     background-size: cover;
     background-position: center;
