@@ -1,306 +1,99 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); /* Import Raleway font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); /* Import Open Sans font */
 
 :root {
-    --primary-color: #4e2dcf;
-    --secondary-color: #664a16;
-    --text-color: #333333;
-    --background-color: #f7f7f7;
-    --max-width: 1200px;
+  --primary-color: #4e2dcf;
+  --secondary-color: #664a16;
+  --text-color: #1E1E1E;
+  --background-color: #f7f7f7;
+  --max-width: 1200px;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+
 body {
-    font-family: 'Cinzel';
-    background-image: url('images/white-office-desk-table-with-laptop-coffee-cup-plant-top-view-with-copy-space-flat-lay_795422-6243.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Makes the image stay fixed when scrolling */
-    background-repeat: no-repeat;
-    position: relative;
-    color: var(--text-color);
-    backface-visibility: calc(10% - 10px);
+  font-family: "Open Sans", sans-serif;  /* Set Open Sans for body and other parts */
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  color: var(--text-color);
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust color & opacity */
-    pointer-events: none; /* Allows interactions with elements below */
-    z-index: -1; /* Keeps overlay behind content */
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust color & opacity */
+  pointer-events: none; /* Allows interactions with elements below */
+  z-index: -1; /* Keeps overlay behind content */
 }
 
 
 nav {
-    box-shadow: 0px 3px 3px var(--secondary-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
+  box-shadow: 0px 3px 3px var(--secondary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  font-family: "Raleway"; 
 }
+
 .nav_logo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  padding-left: 43px;
 }
 
 .nav_links {
-    list-style: none;
-    gap: 2.5rem;
-    display: none;
+  list-style: none;
+  gap: 2.5rem;
+  display: none;
 }
 
 .nav_links a {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 20px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 20px;
+  font-weight: 600;
 }
 
 .nav_links a:hover {
-    color: var(--primary-color);
-    background-color: rgba(104, 65, 242, 0.1);
-}
-
-
-header {
-    background-image: url('images/white-office-desk-table-with-laptop-coffee-cup-plant-top-view-with-copy-space-flat-lay_795422-6243.jpg');
-    position: relative;
-    color: var(--primary-color);
-}
-
-a.contact_btn {
-    padding: 0.5rem 1.5rem;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a.contact_btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.footer_cards {
-    position: absolute;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    align-items: end;
-}
-
-.card {
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: var(--text-color);
-    height: max-content;
-    cursor: pointer;
-    transition: 0.5s;
-    border-left: 4px solid var(--secondary-color);
-}
-
-.card h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.card h5 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-
-.card p {
-    margin-top: 1.2rem;
-    font-size: .9rem;
-    transition: 0.3s;
-}
-
-.nav_logo img {
-    max-height: 5px;
-    width: 100px;
+  color: var(--primary-color);
 }
 
 
 @media (min-width:780px) {
-    .nav_links {
-        display: flex;
-        min-height: 120;
-    }
-    .nav_logo img {
-        min-height: 75px;
-        min-width: 130px;
-    }
-}
-section {
-    min-height: 100vh;
+  .nav_links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    min-height: 120;
+  }
+  .nav_logo img {
+    min-height: 75px;
+    min-width: 130px;
+  }
 }
 
-section:nth-child(1) {
-    color: var(--background-color);
-}
-
-section:nth-child(2) {
-    color: var(--secondary-color);
-    background: var(--background-color);
-}
-
-section:nth-child(3) {
-    color: var(--background-color);
-}
-
-section:nth-child(4) {
-    color: var(--primary-color);
-    background: var(--background-color);
-}
-
-section.container {
-    margin: 5vw;
-}
-
-section h1 {
-    font-size: 3.75rem;
-    font-weight: 600;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-section .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.25rem;
-}
-
-section .cards .text-card {
-    background-color: var(--primary-color);
-    padding: 1.25rem;
-    flex: 1 1 300px;
-    max-width: 400px;
-}
-
-section .cards .text-card h3 {
-    font-size: 1.875rem;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0.625rem;
-    cursor: pointer;
-
-}
-.text-card:hover{
-    transition: 0.5s;   
-    opacity: 0.8;
-}
-.text-card:active{
-    opacity:0.3;
-}
-
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 2s ease;
-}
-
-.reveal.active {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .logo img {
-        max-width: 100px;
-        max-height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo img {
-        max-width: 80px;
-        max-height: 50px;
-    }
-}
-
-@media (max-width: 1200px) {
-    body {
-        font-size: 14px;
-    }
-
-    section h1 {
-        font-size: 3rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    section .cards .text-card h3 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 12px;
-    }
-
-    section h1 {
-        font-size: 2.5rem;
-    }
-
-    section h2 {
-        font-size: 1.75rem;
-    }
-
-    section .cards .text-card h3 {
-        font-size: 1.25rem;
-    }
-
-    .logo img {
-        max-height: 25px; /* Reduced from 40px */
-    }
-}
-
-@media (max-width: 480px) {
-    section h1 {
-        font-size: 2rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    section .cards .text-card h3 {
-        font-size: 1.125rem;
-    }
+.nav_logo img {
+  max-height: 5px; /* You might want to adjust this value */
+  width: 100px;
 }
