@@ -1,99 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); /* Import Raleway font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); /* Import Open Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
 
 :root {
-  --primary-color: #4e2dcf;
-  --secondary-color: #664a16;
-  --text-color: #1E1E1E;
-  --background-color: #f7f7f7;
-  --max-width: 1200px;
+    --primary-color: #4e2dcf;
+    --secondary-color: #664a16;
+    --text-color: #1E1E1E;
+    --background-color: #ffffff;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
 
 body {
-  font-family: "Open Sans", sans-serif;  /* Set Open Sans for body and other parts */
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  color: var(--text-color);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
 }
-
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* Adjust color & opacity */
-  pointer-events: none; /* Allows interactions with elements below */
-  z-index: -1; /* Keeps overlay behind content */
-}
-
 
 nav {
-  box-shadow: 0px 3px 3px var(--secondary-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100px;
-  padding: 0.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1;
-  font-family: "Raleway"; 
-}
-
-.nav_logo {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-color);
-  padding-left: 43px;
-}
-
-.nav_links {
-  list-style: none;
-  gap: 2.5rem;
-  display: none;
-}
-
-.nav_links a {
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 20px;
-  font-weight: 600;
-}
-
-.nav_links a:hover {
-  color: var(--primary-color);
-}
-
-
-@media (min-width:780px) {
-  .nav_links {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 90px;
     display: flex;
-    min-height: 120;
-  }
-  .nav_logo img {
-    min-height: 75px;
-    min-width: 130px;
-  }
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 0 50px;
 }
 
 .nav_logo img {
-  max-height: 5px; /* You might want to adjust this value */
-  width: 100px;
+  max-height: 100px;
+}
+
+nav_logo {
+  padding-left: 1000px;
+}
+
+.nav_links {
+    list-style: none;
+    gap: 2.5rem;
+    display: none;
+}
+
+.nav_links a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.nav_links .link a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid #fbb040;
+}
+
+@media (min-width: 780px) {
+    .nav_links {
+        display: flex;
+    }
+}
+
+/* Header and Heading */
+header {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 170px;
+  padding-left: 100px;
+  padding-right: 50px;
+}
+
+.left {
+  max-width: 900px; /* Increase max width for better line control */
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.2rem; /* Increase font size slightly */
+  font-weight: 700;
+  line-height: 1.1; /* Tighter line height */
+  color: var(--text-color);
+  margin-top: 50px;
+}
+
+h1 .highlight {
+  color: var(--primary-color);
+  position: relative;
+}
+
+h1 p.sub-heading{
+  min-width: 650px;
+}
+.sub-heading {
+  font-size: 1.8rem;
+  font-weight:500;
+  max-width: 660px;
+  color: #6c757d;
+}
+
+.right{
+  max-width: 534px;
+}
+.right img {
+  margin-left: 50px;
+  max-width: 100%; /* Adjust the max-width to control the image size */
+}
+
+.curved-line {
+  margin-left: 190px;
+  margin-bottom: 30px;
 }
