@@ -21,20 +21,20 @@ body {
 }
 
 nav {
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--background-color);
-    padding: 0 50px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0 50px;
+  z-index: 1000; 
 }
-
 .nav_logo img {
   max-height: 100px;
 }
@@ -119,4 +119,93 @@ h1 p.sub-heading{
 .curved-line {
   margin-left: 190px;
   margin-bottom: 30px;
+}
+
+.Our-services{
+  padding: 60px;
+  padding-bottom: 70px;
+}
+
+.Our-services h1{
+  font-family: Raleway;
+font-size: 36px;
+font-weight: 700;
+line-height: 42.26px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+padding-bottom: 40px;
+
+}
+.card{
+  min-height: 300;
+  min-width: 410;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Adjust row heights as needed */
+  gap: 10px; 
+  position: relative;
+}
+
+
+
+.blue-line {
+  width: 378px;
+  height: 7px;
+  background-color: #6841f2; /* Purple color */
+  border-radius: 5px;
+  margin: 20px auto 20px auto; /* Center horizontally and add space at bottom */
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 20px; /* Adjust the gap between cards as needed */
+  padding-top: 20px;
+}
+.card-content h3{
+  padding-bottom: 10px;
+  font-family: Raleway;
+font-size: 20px;
+font-weight: 600;
+line-height: 23.48px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.card-content{
+  padding-left: 20px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+}
+
+.card-content p{
+  font-family: Open Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 24.51px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #6c757d;
+
+}
+
+.card-img img{
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+
+.card img[alt="rect"] { /* Target the specific image */
+  padding-left: 13px;
+  
+}
+
+.Services {
+  color: #FDA600;
 }
