@@ -80,7 +80,7 @@ header {
   padding-right: 50px;
   background: #D9D9D929;
   overflow: hidden;
-
+  margin-bottom: 50px;
 }
 
 .left-1 {
@@ -129,10 +129,6 @@ header {
   height: 100vh;
   align-items: center;
   justify-content: space-between;
-  padding-top: 170px;
-  padding-left: 100px;
-  padding-right: 50px;
-  background: #D9D9D929;
   overflow: hidden;
 }
 
@@ -143,15 +139,36 @@ header {
   color: var(--text-color);
 }
 
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
+.left-2{
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 668px;
+height: 452px;
+top: 825px;
+left: 58px;
+gap: 0px;
+border-radius: 15px 0px 0px 0px;
 }
+
+.right-2{
+  background-color: #F8F8F8;
+  width: 632px;
+height: 418px;
+top: 844px;
+left: 748px;
+gap: 0px;
+border-radius: 10px 0px 0px 0px;
+opacity: 0px;
+
+}
+
+
 
 .Our-services{
   padding: 60px;
-  padding-bottom: 70px;
+  margin-bottom: 70px;
+ 
 }
 
 .Our-services h1{
@@ -212,7 +229,7 @@ text-decoration-skip-ink: none;
 }
 
 .card-content p{
-  font-family: Open Sans;
+  font-family: "Open Sans";
 font-size: 18px;
 font-weight: 400;
 line-height: 24.51px;
@@ -235,5 +252,75 @@ color: #6c757d;
 }
 
 .Services {
+  color: #FDA600;
+}
+
+.Experience{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.Experience h1{
+font-family: Raleway;
+font-size: 40px;
+font-weight: 700;
+line-height: 42.26px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.EI{
+  color: #FDA600;
+}
+.Experience-content{
+min-width: 1230px;
+min-height: 100px;
+top: 2189px;
+left: 71px;
+gap: 0px;
+border-radius: 10px 0px 0px 0px;
+opacity: 0px;
+background: #D9D9D933;
+text-align: center;
+padding-top: 50px;
+padding-left: 70px;
+padding-right: 75px;
+padding-bottom: 50px;
+}
+
+.Experience-content p{
+font-family: "Open Sans";
+font-size: 22px;
+font-weight: 400;
+line-height: 29.96px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #686868;
+
+}
+
+.blue-rectangle {
+  position: absolute;
+  top: 100px; /* Adjust as needed */
+  width: 20; /* Width of the rectangle */
+  height: 40px; /* Height of the rectangle */
+  background-color: #6841F2; /* Use the blue color from your Figma design */
+  width: 92px;
+  height: 34px;
+top: 2400px;
+left: 37px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.why-choose-us{
+  display: inline;
+}
+
+.Us{
   color: #FDA600;
 }
