@@ -79,14 +79,15 @@ header {
   padding-left: 100px;
   padding-right: 50px;
   background: #D9D9D929;
+  overflow: hidden;
 
 }
 
-.left {
+.left-1 {
   max-width: 900px; /* Increase max width for better line control */
 }
 
-h1 {
+.left-1 h1 {
   font-family: "Raleway", sans-serif;
   font-size: 3.2rem; /* Increase font size slightly */
   font-weight: 700;
@@ -95,12 +96,12 @@ h1 {
   margin-top: 50px;
 }
 
-h1 .highlight {
+.left-1 h1 .highlight {
   color: var(--primary-color);
   position: relative;
 }
 
-h1 p.sub-heading{
+.left-1 h1 p.sub-heading{
   min-width: 650px;
 }
 .sub-heading {
@@ -110,10 +111,10 @@ h1 p.sub-heading{
   color: #6c757d;
 }
 
-.right{
+.right-1{
   max-width: 534px;
 }
-.right img {
+.right-1-1 img {
   margin-left: 50px;
   max-width: 100%; /* Adjust the max-width to control the image size */
 }
@@ -121,6 +122,31 @@ h1 p.sub-heading{
 .curved-line {
   margin-left: 190px;
   margin-bottom: 30px;
+}
+
+.AU-blocks {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 170px;
+  padding-left: 100px;
+  padding-right: 50px;
+  background: #D9D9D929;
+  overflow: hidden;
+}
+
+.About-Us h1 {
+  margin-bottom: 20px; /* Adds space below the heading */
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .Our-services{
