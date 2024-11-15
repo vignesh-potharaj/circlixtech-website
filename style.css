@@ -20,6 +20,7 @@ body {
     color: var(--text-color);
 }
 
+
 nav {
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -84,14 +85,14 @@ header {
 }
 
 .left-1 {
-  max-width: 900px; /* Increase max width for better line control */
+  max-width: 900px; 
 }
 
 .left-1 h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 3.2rem; /* Increase font size slightly */
+  font-size: 3.2rem;
   font-weight: 700;
-  line-height: 1.1; /* Tighter line height */
+  line-height: 1.1;
   color: var(--text-color);
   margin-top: 50px;
 }
@@ -116,7 +117,7 @@ header {
 }
 .right-1-1 img {
   margin-left: 50px;
-  max-width: 100%; /* Adjust the max-width to control the image size */
+  max-width: 100%; 
 }
 
 .curved-line {
@@ -133,7 +134,7 @@ header {
 }
 
 .About-Us h1 {
-  margin-bottom: 20px; /* Adds space below the heading */
+  margin-bottom: 20px;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-color);
@@ -160,9 +161,33 @@ left: 748px;
 gap: 0px;
 border-radius: 10px 0px 0px 0px;
 opacity: 0px;
+padding: 50px;
 
 }
 
+.right-2 h2{
+  font-family: Raleway;
+font-size: 28px;
+font-weight: 600;
+line-height: 32.87px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #6841F2;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.right-2 p {
+  font-family: Open Sans;
+font-size: 22px;
+font-weight: 400;
+line-height: 29.96px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #686868;
+}
 
 
 .Our-services{
@@ -188,7 +213,7 @@ padding-bottom: 40px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Adjust row heights as needed */
+  grid-template-rows: auto 1fr auto; 
   gap: 10px; 
   position: relative;
 }
@@ -198,16 +223,16 @@ padding-bottom: 40px;
 .blue-line {
   width: 378px;
   height: 7px;
-  background-color: #6841f2; /* Purple color */
+  background-color: #6841f2; 
   border-radius: 5px;
-  margin: 20px auto 20px auto; /* Center horizontally and add space at bottom */
+  margin: 20px auto 20px auto;
 }
 
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
-  gap: 20px; /* Adjust the gap between cards as needed */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
   padding-top: 20px;
 }
 .card-content h3{
@@ -246,7 +271,7 @@ color: #6c757d;
   padding-left: 20px;
 }
 
-.card img[alt="rect"] { /* Target the specific image */
+.card img[alt="rect"] { 
   padding-left: 13px;
   
 }
@@ -304,10 +329,10 @@ color: #686868;
 
 .blue-rectangle {
   position: absolute;
-  top: 100px; /* Adjust as needed */
-  width: 20; /* Width of the rectangle */
-  height: 40px; /* Height of the rectangle */
-  background-color: #6841F2; /* Use the blue color from your Figma design */
+  top: 100px; 
+  width: 20; 
+  height: 40px; 
+  background-color: #6841F2; 
   width: 92px;
   height: 34px;
 top: 2400px;
@@ -320,7 +345,7 @@ opacity: 0px;
 .wcu-blocks {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Ensures alignment at the top */
+  align-items: flex-start; 
 }
 
 .wcu-blocks h1{
@@ -333,7 +358,7 @@ opacity: 0px;
 
 .image-container {
   position: relative;
-  width: fit-content; /* Adjust as needed */
+  width: fit-content; 
 }
 
 .background-image {
@@ -345,9 +370,9 @@ opacity: 0px;
 
 .overlay-image {
   position: absolute;
-  top: 50px; /* Adjust for alignment */
-  left: 160px; /* Adjust for alignment */
-  z-index: 2; /* Ensures this image is on top */
+  top: 50px; 
+  left: 160px; 
+  z-index: 2; 
 }
 
 
@@ -383,4 +408,59 @@ text-decoration-skip-ink: none;
 color: #686868;
 margin-bottom: 50px;
 padding-left: 17px;
+}
+
+.contact-section {
+  background-color: #6841f2; 
+  color: #ffffff;
+  padding: 50px 80px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-heading h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-heading .highlight {
+  color: #fda600; 
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; 
+  width: 100%; 
+  max-width: 1400px; 
+}
+
+.left-contact {
+  flex: 3;
+}
+
+.right-contact {
+  flex: 2;
+  margin-bottom: 10px;
+}
+
+.left-contact h2, .right-contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.left-contact p, .right-contact p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; 
+    gap: 30px;
+  }
 }
