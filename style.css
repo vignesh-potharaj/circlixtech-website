@@ -218,6 +218,12 @@ padding-bottom: 40px;
   position: relative;
 }
 
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #6841F2;
+
+}
+
 
 
 .blue-line {
@@ -225,9 +231,12 @@ padding-bottom: 40px;
   height: 7px;
   background-color: #6841f2; 
   border-radius: 5px;
-  margin: 20px auto 20px auto;
+  margin: 20px auto;
 }
 
+.card:hover .blue-line {
+  background-color: white; 
+}
 
 .card-container {
   display: grid;
@@ -244,7 +253,10 @@ line-height: 23.48px;
 text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
+}
 
+.card-content:hover{
+  color: white;
 }
 
 .card-content{
@@ -262,6 +274,11 @@ text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #6c757d;
+}
+
+
+.card:hover p{
+  color: #FFFFFF;
 
 }
 
@@ -276,6 +293,10 @@ color: #6c757d;
   
 }
 
+.card:hover .card-img img {
+  filter: brightness(0) invert(1); /* Converts blue to white */
+}
+
 .Services {
   color: #FDA600;
 }
@@ -283,6 +304,7 @@ color: #6c757d;
 .Experience{
   margin-top: 50px;
   margin-bottom: 50px;
+  margin-left: 50px;
 }
 
 .Experience h1{
@@ -345,11 +367,13 @@ opacity: 0px;
 
 .why-choose-us{
   margin-bottom: 50px;
+  margin-left: 50px;
+
 }
 .wcu-blocks {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .wcu-blocks h1{
