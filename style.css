@@ -20,14 +20,17 @@ body {
     color: var(--text-color);
 }
 
+html , body {
+  overflow-x: hidden;
+}
 
 nav {
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
   width: 100%;
-  min-height: 1px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
   background-color: #ffffff;
   padding: 10px 20px;
   z-index: 1000; 
@@ -35,21 +38,19 @@ nav {
 
 
 nav ul{
-  width: 100%;
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2.5rem;
   margin-left: 70px;
+  flex-direction: row;
 }
 
 .nav_logo img {
-  max-height: 100px;
+  max-height: 80px;
 }
 
-nav_logo {
-  padding-left: 1000px;
-}
 
 
 nav li {
@@ -63,6 +64,8 @@ nav a {
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 20px;
+    text-align: center;
+    min-width: 100px;
 }
 
 
@@ -71,6 +74,11 @@ nav:first-child{
   margin-top: auto;
 }
 
+
+.hideOnMobile a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid #fbb040;
+}
 
 nav ul .link a:hover {
     color: var(--primary-color);
@@ -104,31 +112,18 @@ nav ul .link a:hover {
   width: 100%;
 }
 
-@media(max-width: 800px) {
-  .hideOnMobile{
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-  .sidebar{
-    display: 100%;
-  }
-}
-
 
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 170px;
-  padding-left: 100px;
-  padding-right: 50px;
+  justify-content: center;
   background: #D9D9D929;
   overflow: hidden;
   margin-bottom: 50px;
   flex-wrap: wrap;
   text-align: center;
+  max-height: 700px;
+  gap: 50px;
 }
 
 header img {
@@ -289,7 +284,7 @@ padding-bottom: 40px;
 
 
 .blue-line {
-  width: 378px;
+  width: 300px;
   height: 7px;
   background-color: #6841f2; 
   border-radius: 5px;
@@ -659,7 +654,7 @@ font-weight: 350;
       flex-direction: column;
       text-align: center;
       height: 0;
-      min-width: 5px;
+      min-width: 100px;
 
   }
 
@@ -668,13 +663,6 @@ font-weight: 350;
       gap: 10px;
   }
 
-  header {
-      flex-direction: column;
-      text-align: center;
-      max-width: 10x;
-      margin-top: 0;
-      align-items:center ;
-  }
 
   .About-Us .AU-blocks {
       flex-direction: column;
@@ -695,4 +683,63 @@ font-weight: 350;
       margin: 0 auto;
       width: 90%;
   }
+}
+@media (max-width: 400px) {
+  .sidebar{
+    display: 100%;
+  }
+  .nav_logo img {
+    max-width: 100%;
+  }
+  nav {
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+  header{
+    margin-top: 100px;
+  }
+  nav ul {
+    justify-content: end;
+  }
+
+  .blue-line {
+    width: 30px;
+    height: 7px;
+    background-color: #6841f2; 
+    border-radius: 5px;
+    margin: 20px auto;
+  }
+  
+
+
+}
+
+@media (max-width: 1300px) {
+  .hideOnMobile{
+    display: none;
+  }
+  .nav_logo {
+      flex: none; 
+  }
+  .nav_logo img {
+    min-width: 60px;
+  }
+  nav {
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+  nav ul {
+    justify-content: end;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0;
+    align-items:center ;
+    min-height: 1200px;
+}
+
+  
 }
